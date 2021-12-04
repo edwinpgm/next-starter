@@ -1,6 +1,10 @@
-import type { Config } from '@jest/types';
+const nextJest = require('next/jest');
 
-const config: Config.InitialOptions = {
+const createJestConfig = nextJest({
+  dir: './',
+});
+
+const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
   transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(ts|tsx)$'],
@@ -18,4 +22,4 @@ const config: Config.InitialOptions = {
   },
 };
 
-export default config;
+export default createJestConfig(customJestConfig);

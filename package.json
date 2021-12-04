@@ -1,13 +1,13 @@
 {
   "name": "next-starter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "test": "jest",
-    "lint": "eslint --ignore-path .gitignore --ext .ts,.tsx .",
+    "lint": "next lint",
     "check-types": "tsc",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx)\"",
     "format": "npm run prettier -- --write",
@@ -19,7 +19,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^10.2.3",
+    "next": "^12.0.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -33,8 +33,8 @@
     "@typescript-eslint/parser": "^4.22.0",
     "babel-jest": "^26.6.3",
     "eslint": "^7.24.0",
+    "eslint-config-next": "12.0.5",
     "eslint-config-prettier": "^8.2.0",
-    "eslint-plugin-react": "^7.23.2",
     "husky": "^7.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
@@ -43,6 +43,6 @@
     "prettier": "^2.2.1",
     "sass": "^1.32.10",
     "ts-node": "^9.1.1",
-    "typescript": "^4.2.4"
+    "typescript": "^4.5.2"
   }
 }
